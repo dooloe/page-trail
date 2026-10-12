@@ -1,10 +1,10 @@
-# BookNest — MVP Technical Architecture
+# PageTrail — MVP Technical Architecture
 
 ## 1. Scope and architectural decision
 
 This document translates [the MVP product plan](./plan.md) into a technical architecture using the selected stack. The product plan remains the source of truth for feature scope.
 
-BookNest is a single-user, browser-based application. React renders the interface, IndexedDB stores the user's library, and Open Library supplies discovery data. There is no application backend, registration, or login in the MVP.
+PageTrail is a single-user, browser-based application. React renders the interface, IndexedDB stores the user's library, and Open Library supplies discovery data. There is no application backend, registration, or login in the MVP.
 
 Build and verify the application locally first. Deployment is a later step, outside the initial MVP build.
 

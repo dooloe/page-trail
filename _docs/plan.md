@@ -1,6 +1,6 @@
-# BookNest — MVP Product Scope
+# PageTrail — MVP Product Scope
 
-**Product idea:** BookNest is a personal reading tracker and digital bookshelf that helps users discover books, organize their reading lists, track their progress, and record their thoughts.
+**Product idea:** PageTrail is a personal reading tracker and digital bookshelf that helps users discover books, organize their reading lists, track their progress, and record their thoughts.
 
 **Main goal:** Make it easy to manage personal reading activities in one cozy, organized space.
 
@@ -53,7 +53,7 @@ Users can track how much of a book they have read.
 **How it works:**
 - Select a book marked **Currently Reading**.
 - Enter the current page number.
-- BookNest calculates the completion percentage.
+- PageTrail calculates the completion percentage.
 - A visual progress bar displays the result.
 
 **Example:** Page 120 of 400 = **30% completed**.
@@ -105,7 +105,7 @@ A simple overview of the user's reading activity.
 
 ## 2. Application Pages
 
-BookNest will have four main pages.
+PageTrail will have four main pages.
 
 | Page | Purpose |
 |---|---|
@@ -182,13 +182,13 @@ The MVP is complete when a user can:
 6. Close and reopen the application without losing saved information.
 7. Complete these workflows without critical errors during local testing.
 
-**Release decision:** Build and test BookNest locally first, then deploy after tests and necessary fixes. Deployment is not part of the initial MVP build.
+**Release decision:** Build and test PageTrail locally first, then deploy after tests and necessary fixes. Deployment is not part of the initial MVP build.
 
 ---
 
 ## Final Product Decision
 
-**BookNest will be a cozy, single-user digital bookshelf focused on three essential activities: organizing books, tracking reading progress, and remembering personal thoughts about reading.**
+**PageTrail will be a cozy, single-user digital bookshelf focused on three essential activities: organizing books, tracking reading progress, and remembering personal thoughts about reading.**
 
 The MVP includes **five core feature groups**, **four pages**, and a straightforward reading workflow.
 
