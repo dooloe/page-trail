@@ -1,0 +1,4 @@
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: var(--space-medium); }
+.stats div { padding: var(--space-large); border: 1px solid var(--color-border); background: var(--color-surface); border-radius: var(--radius); }
+.stats dt { color: var(--color-muted); }
+.stats dd { margin: var(--space-small) 0 0; font-size: 1.5rem; overflow-wrap: anywhere; }

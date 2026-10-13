@@ -2,7 +2,13 @@
 
 The 27 MVP tasks have moved to [GitHub Issues](https://github.com/dooloe/page-trail/issues). Update implementation progress and task details there.
 
+All 27 MVP tasks have local implementation and acceptance evidence as of
+2026-10-13. See the [MVP handoff](./mvp-handoff.md) for the issue-by-issue audit,
+executed checks, and documented limitations.
+
 Based on [the product plan](./plan.md) and [the selected architecture](./architecture.md). The list below preserves the intended implementation order; each issue contains its goal, scope, prerequisites, and verification requirements.
+
+Use the [task template](./task-template.md) when creating or refining issues, and follow the [development process](./process.md) for implementation and verification.
 
 1. [Set up an empty project with a passing test](https://github.com/dooloe/page-trail/issues/1)
 2. [Define the book model and creation defaults](https://github.com/dooloe/page-trail/issues/2)

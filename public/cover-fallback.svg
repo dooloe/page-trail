@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="360" viewBox="0 0 240 360">
+  <rect width="240" height="360" rx="8" fill="#e7eddf"/>
+  <path d="M28 0v360" stroke="#3f5f49" stroke-width="8"/>
+  <path d="M76 132q22-14 44 0q22-14 44 0v72q-22-14-44 0q-22-14-44 0z" fill="none" stroke="#3f5f49" stroke-width="4"/>
+  <path d="M120 132v72" stroke="#3f5f49" stroke-width="4"/>
+  <text x="128" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#362c24">PageTrail</text>
+</svg>

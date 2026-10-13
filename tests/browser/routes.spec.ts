@@ -1,0 +1,34 @@
+import { expect, test } from '@playwright/test';
+import { fixture, keyboardActivate, records, seed } from './helpers';
+
+test('all routes, direct/reloaded details, back/forward, unknown paths and keyboard navigation', async ({ page }) => {
+  let searchRequests = 0;
+  page.on('request', request => { if (request.url().startsWith('https://openlibrary.org/search.json')) searchRequests++; });
+  await seed(page, [fixture()]);
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: 'Your reading journey' })).toBeVisible();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'Dashboard', exact: true })).toBeFocused();
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/\/library$/);
+  await expect(page.getByRole('link', { name: 'My Library', exact: true })).toHaveAttribute('aria-current', 'page');
+  await keyboardActivate(page, page.getByRole('link', { name: 'Discover Books', exact: true }));
+  await expect(page.getByRole('heading', { name: 'Discover Books' })).toBeVisible();
+  await page.goBack(); await expect(page.getByRole('heading', { name: 'My Library' })).toBeVisible();
+  await page.goForward(); await expect(page).toHaveURL(/\/discover$/);
+  await page.goto('/books/one');
+  await expect(page.getByRole('heading', { name: 'Dune', exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('heading', { name: 'Dune', exact: true })).toBeVisible();
+  expect((await records(page))[0].id).toBe('one');
+  await page.goto('/not-a-route');
+  await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
+  await keyboardActivate(page, page.getByRole('link', { name: 'Return to My Library' }));
+  await expect(page).toHaveURL(/\/library$/);
+  await page.goto('/books/missing');
+  await expect(page.getByRole('heading', { name: 'Book not found' })).toBeVisible();
+  expect(searchRequests).toBe(0);
+});

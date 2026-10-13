@@ -1,0 +1,6 @@
+.card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); overflow: hidden; }
+.cover { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: contain; background: var(--color-soft-green); }
+.body { padding: var(--space-medium); overflow-wrap: anywhere; }
+.title { margin: 0 0 var(--space-small); font-size: 1.2rem; }
+.authors { color: var(--color-muted); }
+.status { display: inline-block; padding: .15rem .5rem; background: var(--color-soft-green); border-radius: .3rem; font-size: .9rem; }

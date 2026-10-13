@@ -25,6 +25,12 @@ Build and verify the application locally first. Deployment is a later step, outs
 
 Use React state for temporary interface state. No additional global state library is needed for the MVP.
 
+React, TypeScript, Vite, Vitest, React Router, Dexie, dexie-react-hooks,
+fake-indexeddb, and Playwright are installed. The user approved adding the five
+planned router, storage, and testing packages. Ask the user before adding any
+further dependency, as required by [AGENTS.md](../AGENTS.md). Add approved
+dependencies to `package.json` and update `package-lock.json` in the same change.
+
 ## 3. Application structure and data flow
 
 The application has four layers:
